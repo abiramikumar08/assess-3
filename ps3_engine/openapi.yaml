@@ -1,0 +1,365 @@
+openapi: 3.1.0
+info:
+  title: "IncuBrix PS3 \u2014 Script-to-B-roll Video Engine"
+  version: 1.0.0
+paths:
+  /health:
+    get:
+      tags:
+      - health
+      summary: Liveness check
+      operationId: health_root_health_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /ready:
+    get:
+      tags:
+      - health
+      summary: Readiness check
+      operationId: ready_root_ready_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /api/v1/health:
+    get:
+      tags:
+      - broll
+      summary: Liveness check
+      operationId: health_api_v1_health_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /api/v1/ready:
+    get:
+      tags:
+      - broll
+      summary: "Readiness check \u2014 verifies Redis connectivity"
+      operationId: ready_api_v1_ready_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /api/v1/broll/jobs:
+    post:
+      tags:
+      - broll
+      summary: Submit a B-roll video job
+      operationId: create_job_api_v1_broll_jobs_post
+      parameters:
+      - name: Idempotency-Key
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Idempotency-Key
+      - name: X-Correlation-Id
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: X-Correlation-Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobRequest'
+      responses:
+        '202':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/broll/jobs/{job_id}:
+    get:
+      tags:
+      - broll
+      summary: Get job status and result links
+      operationId: get_job_status_api_v1_broll_jobs__job_id__get
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Job Id
+      - name: X-Correlation-Id
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: X-Correlation-Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/jobs/{job_id}:
+    get:
+      tags:
+      - broll
+      summary: Get job status and result links
+      operationId: get_job_status_api_v1_jobs__job_id__get
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Job Id
+      - name: X-Correlation-Id
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: X-Correlation-Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/broll/jobs/{job_id}/swap-clip:
+    post:
+      tags:
+      - broll
+      summary: Swap scene clip and re-render affected parts
+      operationId: swap_clip_endpoint_api_v1_broll_jobs__job_id__swap_clip_post
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Job Id
+      - name: X-Correlation-Id
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: X-Correlation-Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SwapClipRequest'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/jobs/{job_id}/swap-clip:
+    post:
+      tags:
+      - broll
+      summary: Swap scene clip and re-render affected parts
+      operationId: swap_clip_endpoint_api_v1_jobs__job_id__swap_clip_post
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Job Id
+      - name: X-Correlation-Id
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: X-Correlation-Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SwapClipRequest'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    CaptionOptions:
+      properties:
+        burn_in:
+          type: boolean
+          title: Burn In
+          default: true
+        srt:
+          type: boolean
+          title: Srt
+          default: true
+      type: object
+      title: CaptionOptions
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    JobRequest:
+      properties:
+        audio_url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Audio Url
+          description: "URL to an audio file (mp3, wav, m4a) \u2014 \u226410 min"
+        script:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Script
+          description: Plain-text script to be narrated via TTS
+        scenes:
+          anyOf:
+          - items:
+              type: object
+            type: array
+          - type: 'null'
+          title: Scenes
+          description: 'IncuBrix scene list: [{"text": "...", "visual_hint": "..."}]'
+        voice:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Voice
+          description: TTS voice identifier
+          default: en-US
+        aspect_ratios:
+          anyOf:
+          - items:
+              type: string
+              enum:
+              - '16:9'
+              - '9:16'
+              - '1:1'
+            type: array
+          - type: 'null'
+          title: Aspect Ratios
+          description: Requested output aspect ratios
+          default:
+          - '16:9'
+        style:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Style
+          default: bright, modern, real-world footage
+        avoid:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Avoid
+          description: Content tags to avoid (e.g. faces, alcohol)
+        captions:
+          anyOf:
+          - $ref: '#/components/schemas/CaptionOptions'
+          - type: 'null'
+        callback_url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Callback Url
+          description: Webhook URL for job completion notification
+      type: object
+      title: JobRequest
+    SwapClipRequest:
+      properties:
+        scene_index:
+          type: integer
+          title: Scene Index
+        new_query:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: New Query
+      type: object
+      required:
+      - scene_index
+      title: SwapClipRequest
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError

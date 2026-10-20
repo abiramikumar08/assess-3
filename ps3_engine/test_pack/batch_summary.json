@@ -1,0 +1,172 @@
+[
+  {
+    "name": "01_finance_tutorial",
+    "status": "succeeded",
+    "elapsed_s": 2.7,
+    "result": {
+      "job_id": "3004d8ce-276e-4b65-959c-383f5cc8fc77",
+      "videos": {
+        "16:9": "outputs\\3004d8ce-276e-4b65-959c-383f5cc8fc77\\video_16x9.mp4"
+      },
+      "srt": "outputs\\3004d8ce-276e-4b65-959c-383f5cc8fc77\\captions.srt",
+      "timeline": "outputs\\3004d8ce-276e-4b65-959c-383f5cc8fc77\\timeline.json",
+      "manifest": "outputs\\3004d8ce-276e-4b65-959c-383f5cc8fc77\\manifest.json",
+      "warnings": [],
+      "elapsed_s": 2.7,
+      "narration_duration_s": 15.53655328798186
+    }
+  },
+  {
+    "name": "02_tech_news",
+    "status": "succeeded",
+    "elapsed_s": 2.05,
+    "result": {
+      "job_id": "c135aebb-1821-4924-8402-89cbc99241eb",
+      "videos": {
+        "16:9": "outputs\\c135aebb-1821-4924-8402-89cbc99241eb\\video_16x9.mp4"
+      },
+      "srt": "outputs\\c135aebb-1821-4924-8402-89cbc99241eb\\captions.srt",
+      "timeline": "outputs\\c135aebb-1821-4924-8402-89cbc99241eb\\timeline.json",
+      "manifest": "outputs\\c135aebb-1821-4924-8402-89cbc99241eb\\manifest.json",
+      "warnings": [],
+      "elapsed_s": 2.05,
+      "narration_duration_s": 11.73219954648526
+    }
+  },
+  {
+    "name": "03_coffee_promo",
+    "status": "succeeded",
+    "elapsed_s": 1.77,
+    "result": {
+      "job_id": "d4a4f257-f940-469c-bef3-aab70ba5cfd6",
+      "videos": {
+        "9:16": "outputs\\d4a4f257-f940-469c-bef3-aab70ba5cfd6\\video_9x16.mp4"
+      },
+      "srt": "outputs\\d4a4f257-f940-469c-bef3-aab70ba5cfd6\\captions.srt",
+      "timeline": "outputs\\d4a4f257-f940-469c-bef3-aab70ba5cfd6\\timeline.json",
+      "manifest": "outputs\\d4a4f257-f940-469c-bef3-aab70ba5cfd6\\manifest.json",
+      "warnings": [],
+      "elapsed_s": 1.77,
+      "narration_duration_s": 8.69814058956916
+    }
+  },
+  {
+    "name": "04_fitness_story",
+    "status": "succeeded",
+    "elapsed_s": 1.85,
+    "result": {
+      "job_id": "d97c531a-865e-426d-970a-6415ba45fee3",
+      "videos": {
+        "9:16": "outputs\\d97c531a-865e-426d-970a-6415ba45fee3\\video_9x16.mp4"
+      },
+      "srt": "outputs\\d97c531a-865e-426d-970a-6415ba45fee3\\captions.srt",
+      "timeline": "outputs\\d97c531a-865e-426d-970a-6415ba45fee3\\timeline.json",
+      "manifest": "outputs\\d97c531a-865e-426d-970a-6415ba45fee3\\manifest.json",
+      "warnings": [],
+      "elapsed_s": 1.85,
+      "narration_duration_s": 9.507845804988662
+    }
+  },
+  {
+    "name": "05_travel_documentary",
+    "status": "succeeded",
+    "elapsed_s": 2.01,
+    "result": {
+      "job_id": "335fd78b-55a1-486c-815c-701bc6919082",
+      "videos": {
+        "16:9": "outputs\\335fd78b-55a1-486c-815c-701bc6919082\\video_16x9.mp4"
+      },
+      "srt": "outputs\\335fd78b-55a1-486c-815c-701bc6919082\\captions.srt",
+      "timeline": "outputs\\335fd78b-55a1-486c-815c-701bc6919082\\timeline.json",
+      "manifest": "outputs\\335fd78b-55a1-486c-815c-701bc6919082\\manifest.json",
+      "warnings": [],
+      "elapsed_s": 2.01,
+      "narration_duration_s": 12.597278911564626
+    }
+  },
+  {
+    "name": "06_mindfulness_meditation",
+    "status": "succeeded",
+    "elapsed_s": 1.76,
+    "result": {
+      "job_id": "559429ec-bd1f-43a0-8451-362977a89dfb",
+      "videos": {
+        "1:1": "outputs\\559429ec-bd1f-43a0-8451-362977a89dfb\\video_1x1.mp4"
+      },
+      "srt": "outputs\\559429ec-bd1f-43a0-8451-362977a89dfb\\captions.srt",
+      "timeline": "outputs\\559429ec-bd1f-43a0-8451-362977a89dfb\\timeline.json",
+      "manifest": "outputs\\559429ec-bd1f-43a0-8451-362977a89dfb\\manifest.json",
+      "warnings": [],
+      "elapsed_s": 1.76,
+      "narration_duration_s": 9.17814058956916
+    }
+  },
+  {
+    "name": "07_ecommerce_ad",
+    "status": "succeeded",
+    "elapsed_s": 1.84,
+    "result": {
+      "job_id": "c25dee16-4294-4032-b6dd-a3b90ce974fd",
+      "videos": {
+        "1:1": "outputs\\c25dee16-4294-4032-b6dd-a3b90ce974fd\\video_1x1.mp4"
+      },
+      "srt": "outputs\\c25dee16-4294-4032-b6dd-a3b90ce974fd\\captions.srt",
+      "timeline": "outputs\\c25dee16-4294-4032-b6dd-a3b90ce974fd\\timeline.json",
+      "manifest": "outputs\\c25dee16-4294-4032-b6dd-a3b90ce974fd\\manifest.json",
+      "warnings": [],
+      "elapsed_s": 1.84,
+      "narration_duration_s": 11.56748299319728
+    }
+  },
+  {
+    "name": "08_startup_pitch",
+    "status": "succeeded",
+    "elapsed_s": 2.02,
+    "result": {
+      "job_id": "ec52968c-e414-4f7d-bd1b-b16066cc7a04",
+      "videos": {
+        "16:9": "outputs\\ec52968c-e414-4f7d-bd1b-b16066cc7a04\\video_16x9.mp4"
+      },
+      "srt": "outputs\\ec52968c-e414-4f7d-bd1b-b16066cc7a04\\captions.srt",
+      "timeline": "outputs\\ec52968c-e414-4f7d-bd1b-b16066cc7a04\\timeline.json",
+      "manifest": "outputs\\ec52968c-e414-4f7d-bd1b-b16066cc7a04\\manifest.json",
+      "warnings": [],
+      "elapsed_s": 2.02,
+      "narration_duration_s": 12.37718820861678
+    }
+  },
+  {
+    "name": "09_science_explainer",
+    "status": "succeeded",
+    "elapsed_s": 1.94,
+    "result": {
+      "job_id": "ce6d7ed2-17f2-4bde-a979-fa40c25af169",
+      "videos": {
+        "16:9": "outputs\\ce6d7ed2-17f2-4bde-a979-fa40c25af169\\video_16x9.mp4"
+      },
+      "srt": "outputs\\ce6d7ed2-17f2-4bde-a979-fa40c25af169\\captions.srt",
+      "timeline": "outputs\\ce6d7ed2-17f2-4bde-a979-fa40c25af169\\timeline.json",
+      "manifest": "outputs\\ce6d7ed2-17f2-4bde-a979-fa40c25af169\\manifest.json",
+      "warnings": [],
+      "elapsed_s": 1.94,
+      "narration_duration_s": 11.397460317460318
+    }
+  },
+  {
+    "name": "10_cooking_recipe",
+    "status": "succeeded",
+    "elapsed_s": 2.3,
+    "result": {
+      "job_id": "9e680405-f44f-4858-9498-adb6ab4b412f",
+      "videos": {
+        "16:9": "outputs\\9e680405-f44f-4858-9498-adb6ab4b412f\\video_16x9.mp4"
+      },
+      "srt": "outputs\\9e680405-f44f-4858-9498-adb6ab4b412f\\captions.srt",
+      "timeline": "outputs\\9e680405-f44f-4858-9498-adb6ab4b412f\\timeline.json",
+      "manifest": "outputs\\9e680405-f44f-4858-9498-adb6ab4b412f\\manifest.json",
+      "warnings": [],
+      "elapsed_s": 2.3,
+      "narration_duration_s": 14.556643990929706
+    }
+  }
+]

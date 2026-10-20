@@ -1,21 +1,49 @@
-version:  3.8
+version: "3.8"
+
 services:
   redis:
     image: redis:7-alpine
+    restart: unless-stopped
     ports:
-      - 6379:6379
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
   api:
     build: .
+    restart: unless-stopped
     ports:
-      - 8000:8000
-    depends_on:
-      - redis
+      - "8000:8000"
     environment:
       - REDIS_URL=redis://redis:6379/0
+      - FOOTAGE_PROVIDER=${FOOTAGE_PROVIDER:-mock}
+      - TTS_PROVIDER=${TTS_PROVIDER:-mock}
+      - PEXELS_API_KEY=${PEXELS_API_KEY:-}
+      - OUTPUT_DIR=/app/outputs
+    volumes:
+      - shared_outputs:/app/outputs
+    depends_on:
+      redis:
+        condition: service_healthy
+
   worker:
     build: .
-    command: rq worker broll
-    depends_on:
-      - redis
+    restart: unless-stopped
+    command: rq worker broll --url redis://redis:6379/0
     environment:
       - REDIS_URL=redis://redis:6379/0
+      - FOOTAGE_PROVIDER=${FOOTAGE_PROVIDER:-mock}
+      - TTS_PROVIDER=${TTS_PROVIDER:-mock}
+      - PEXELS_API_KEY=${PEXELS_API_KEY:-}
+      - OUTPUT_DIR=/app/outputs
+    volumes:
+      - shared_outputs:/app/outputs
+    depends_on:
+      redis:
+        condition: service_healthy
+
+volumes:
+  shared_outputs:
