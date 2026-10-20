@@ -21,6 +21,8 @@ In accordance with Section "Tools and resources: use anything" (Rule 1 & Rule 2:
 
 | Source | Licence | Attribution Required | Commercial Use | Notes |
 | :--- | :--- | :--- | :--- | :--- |
+| **Wikimedia Commons (`clip1_fountain.webm`)** | CC BY-SA 4.0 | Yes (Wikimedia Commons Contributor) | Allowed | Real stock video used in genuine E2E verification test. |
+| **Wikimedia Commons (`clip2_river.ogv`)** | CC BY 2.0 de | Yes (User:Mattes) | Allowed | Real stock video used in genuine E2E verification test. |
 | **Pexels API** | Pexels Free Licence | Recommended (Photographer name + Pexels link stored in `timeline.json`) | Allowed | Stock video footage search by semantic query keywords. |
 | **Synthetic Mock Footage** | Generated Asset (Public Domain / MIT) | None | Allowed | Offline fallback producing clean solid-hue video clips matching scene duration. Zero external dependencies. |
 

@@ -1,0 +1,7 @@
+1
+00:00:00,000 --> 00:00:03,003
+Clean water is essential for human life.
+
+2
+00:00:03,003 --> 00:00:07,293
+Fresh rivers and streams nourish our planet every single day.

@@ -1,0 +1,32 @@
+{
+  "job_id": "genuine_demo_run",
+  "schema_version": "1.0",
+  "models_and_providers": {
+    "tts": "sapi",
+    "footage": "mock",
+    "encoder": "FFmpeg 7.1 / libx264"
+  },
+  "settings": {
+    "fps": 30,
+    "aspect_ratios": [
+      "16:9",
+      "9:16"
+    ]
+  },
+  "timings": {
+    "total_elapsed_s": 3.72
+  },
+  "cost_estimate": {
+    "note": "SAPI TTS is free. Pexels API is free for commercial use. FFmpeg is free/open-source.",
+    "usd_per_minute_video": 0.0
+  },
+  "footage_sources": [
+    "wikimedia_commons"
+  ],
+  "warnings": [],
+  "licence_summary": "All clips sourced from Pexels (commercial use allowed) or generated as offline mock assets.",
+  "output_files": {
+    "16:9": "outputs\\genuine_demo_run\\video_16x9.mp4",
+    "9:16": "outputs\\genuine_demo_run\\video_9x16.mp4"
+  }
+}

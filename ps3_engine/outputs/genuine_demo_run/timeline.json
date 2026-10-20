@@ -1,0 +1,42 @@
+{
+  "scenes": [
+    {
+      "scene_index": 0,
+      "text": "Clean water is essential for human life.",
+      "start_s": 0.0,
+      "end_s": 3.003,
+      "duration_s": 3.003,
+      "visual_hint": "clean water essential human life",
+      "clip": {
+        "path": "D:\\Downloads\\assess-3\\ps3_engine\\real_assets\\clip1_fountain.webm",
+        "source": "wikimedia_commons",
+        "licence": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attribution": "Wikimedia Commons Contributor",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fontanna.webm",
+        "is_ai_generated": false,
+        "reason": "Best semantic match for: 'clean water essential human life'",
+        "relevance_score": 4.5
+      }
+    },
+    {
+      "scene_index": 1,
+      "text": "Fresh rivers and streams nourish our planet every single day.",
+      "start_s": 3.003,
+      "end_s": 7.293,
+      "duration_s": 4.29,
+      "visual_hint": "fresh rivers streams nourish planet",
+      "clip": {
+        "path": "D:\\Downloads\\assess-3\\ps3_engine\\real_assets\\clip2_river.ogv",
+        "source": "wikimedia_commons",
+        "licence": "Creative Commons Attribution 2.0 Generic (CC BY 2.0 de)",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0/de/",
+        "attribution": "User:Mattes (Wikimedia Commons)",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ramsauer_Ache_im_Zauberwald_HQ.ogv",
+        "is_ai_generated": false,
+        "reason": "Best semantic match for: 'fresh rivers streams nourish planet'",
+        "relevance_score": 4.8
+      }
+    }
+  ]
+}

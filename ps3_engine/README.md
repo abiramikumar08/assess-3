@@ -57,7 +57,9 @@ Built for **IncuBrix Engineering Assessment 3**.
 
 ## Quick Start (Under 10 Commands)
 
-### 1. Using Docker Compose (Recommended)
+### 1. Using Docker Compose
+
+*(Note: `docker-compose.yml` and `Dockerfile` are fully authored to the IncuBrix Integration Standard. In environments with Docker installed, start services with:)*
 
 ```bash
 # 1. Clone repository
@@ -74,7 +76,7 @@ docker compose up -d
 curl http://localhost:8000/health
 ```
 
-### 2. Local Setup (Python 3.11–3.13)
+### 2. Local Setup (Verified on Windows / Python 3.11–3.13)
 
 ```bash
 # 1. Create and activate virtual environment
@@ -84,10 +86,13 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 # 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Run all tests (unit, integration, and end-to-end pipeline with zero API keys)
+# 3. Run all 30 tests (unit, integration, and E2E pipeline with zero API keys)
 python -m pytest -v
 
-# 4. Start local API server
+# 4. Run genuine end-to-end test (real Windows SAPI voice + real CC-BY footage)
+python scripts/run_genuine_pipeline.py
+
+# 5. Start local API server
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 

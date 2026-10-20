@@ -6,4 +6,5 @@ __pycache__/
 *.pyo
 .pytest_cache/
 .venv/
-ps3_engine/outputs/
+ps3_engine/outputs/*
+!ps3_engine/outputs/genuine_demo_run/
